@@ -13,7 +13,9 @@ RSpec.feature "User can search for stations" do
     # expect(page).to have_current_path(search_path(q: '80203'))
     expect(current_path).to eq('/search')
     # Then I should see a list of the 10 closest stations within 6 miles sorted by distance
-    expect(page).to have_content('something')
+    expect(page).to have_content('UDR')
+    expect(page).to have_content("City of Denver - Cultural Center Complex Garage")
+    expect(page).to have_content("Hyatt Regency Denver")
     # And the stations should be limited to Electric and Propane
     # And for each of the stations I should see Name, Address, Fuel Types, Distance, and Access Times
   end
